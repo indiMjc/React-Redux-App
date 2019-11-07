@@ -23,8 +23,7 @@ export const getExchanges = () => {
 		return axios
 			.get(`https://api.coingecko.com/api/v3/exchanges?per_page=10`)
 			.then(res => {
-				console.log(res);
-				dispatch(exchLoadingSuccess(res));
+				dispatch(exchLoadingSuccess(res.data));
 			})
 			.catch(err => dispatch(loadFail(err)));
 	};
