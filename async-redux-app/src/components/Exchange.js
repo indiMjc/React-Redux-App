@@ -4,13 +4,24 @@ import "./exchange.css";
 const Exchange = props => {
 	return (
 		<div className="exchange-card">
-			<h1>Name: {props.name}</h1>
-			<p>Country: {props.country}</p>
+			<h1>{props.name}</h1>
+			<p>
+				<strong>Country:</strong> {props.country}
+			</p>
 			<a href={props.url}>{props.url}</a>
-			<p>Trust Score: {props.trustScore}</p>
-			<p>Trust Rank: {props.trustRank}</p>
-			<p>24hr Volume: {props.btcVol} BTC</p>
-			<p>Normalized 24hr Volume: {props.normalizedVol} BTC</p>
+			<p>
+				<strong>Trust Score:</strong> {props.trustScore}
+			</p>
+			<p>
+				<strong>Trust Rank:</strong> {props.trustRank}
+			</p>
+			<p>
+				<strong>24hr Volume:</strong> {props.btcVol} <strong>BTC</strong>
+			</p>
+			<p>
+				<strong>Normalized 24hr Volume:</strong> {props.normalizedVol}{" "}
+				<strong>BTC</strong>
+			</p>
 		</div>
 	);
 };
